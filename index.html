@@ -1,13 +1,156 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=UNO%20Landing.dc.html">
-  <title>Welcome to UNO — Università a Oristano</title>
-  <link rel="canonical" href="UNO Landing.dc.html">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
-  <p><a href="UNO Landing.dc.html">Welcome to UNO — vai alla landing page</a></p>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/tokens/base.css">
+  <link rel="stylesheet" href="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/styles.css">
+  <script src="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/_ds_bundle.js"></script>
+  <style>
+    /* Testi scuri sempre in blu navy del brand */
+    main { --text-body: var(--uno-navy); --text-strong: var(--uno-navy); }
+    @media (max-width: 860px) {
+      .l-hero__grid { grid-template-columns: 1fr !important; }
+      .l-nav__links { display: none !important; }
+      .l-terr { grid-template-columns: 1fr !important; }
+      .l-stats { grid-template-columns: repeat(2,1fr) !important; }
+    }
+  </style>
+  <script>
+    (function(){
+      function onScroll(){
+        var h=document.getElementById('site-header'), l=document.getElementById('site-logo');
+        if(!h||!l) return;
+        var s=window.scrollY>24;
+        h.firstElementChild.style.paddingTop=s?'8px':'14px';
+        h.firstElementChild.style.paddingBottom=s?'8px':'14px';
+        l.style.height=s?'73px':'81px';
+      }
+      window.addEventListener('scroll',onScroll,{passive:true});
+      onScroll();
+    })();
+  </script>
+</helmet>
+
+<main style="font-family: var(--font-sans); color: var(--text-body); background: var(--surface-page);">
+
+  <!-- HEADER -->
+  <header id="site-header" style="position:sticky; top:0; z-index:50; background:var(--uno-navy); border-bottom:1px solid var(--border-on-dark); transition:padding .25s var(--ease-standard,ease);">
+    <div style="max-width:1200px; margin:0 auto; padding:14px clamp(20px,4vw,48px); display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <img id="site-logo" src="assets/logo/welcome-uno-white-green.svg" alt="Welcome to UNO — Università a Oristano" style="height:81px; width:auto; display:block; transition:height .25s var(--ease-standard,ease);">
+      <nav class="l-nav__links" style="display:flex; align-items:center; gap:32px; font-size:.9375rem; font-weight:600; color:rgba(255,255,255,.86);">
+        <a href="#corsi" style="color:inherit;">Corsi</a>
+        <a href="#territorio" style="color:inherit;">La sede</a>
+        <a href="#openday" style="color:inherit;">Summer Day</a>
+      </nav>
+      <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="primary" size="md" href="#corsi" hint-size="150px,44px">Iscriviti ora</x-import>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="position:relative; overflow:hidden; background:var(--uno-navy);">
+    <div style="position:absolute; inset:0; background-image:url('uploads/DSC04973.jpg'); background-size:cover; background-position:center 40%;"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(105deg, rgba(19,26,46,.86) 0%, rgba(19,26,46,.62) 46%, rgba(19,26,46,.18) 100%);"></div>
+    <div class="l-hero__grid" style="position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:clamp(64px,10vw,132px) clamp(20px,4vw,48px); display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:center;">
+      <div>
+        <span style="display:inline-block; font-size:.8125rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#7fd4c8;">Iscrizioni 2026/2027</span>
+        <h1 style="margin:16px 0 0; font-size:clamp(2.8rem,6.4vw,4.8rem); font-weight:800; line-height:1.0; letter-spacing:-.03em; color:#fff; text-wrap:balance;">L'università <em style="font-style:italic; color:#7fd4c8;">a misura</em> di studente</h1>
+        <p style="margin:24px 0 0; font-size:1.3rem; font-weight:500; line-height:1.5; color:rgba(255,255,255,.86); max-width:52ch;">Piccole classi, rapporto diretto con i docenti, laboratori, esperienze sul campo e un territorio che diventa parte della tua formazione. Scopri i corsi di laurea del Consorzio UNO e trova quello giusto per te.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:36px;">
+          <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="primary" size="lg" href="#corsi" hint-size="190px,56px">Scopri i corsi</x-import>
+          <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="cream" size="lg" href="#openday" hint-size="260px,56px">Vieni all'UNO Summer Day</x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section style="background:var(--surface-page); border-bottom:1px solid var(--border-subtle);">
+    <div class="l-stats" style="max-width:1200px; margin:0 auto; padding:clamp(28px,4vw,44px) clamp(20px,4vw,48px); display:grid; grid-template-columns:repeat(4,1fr); gap:24px;">
+      <div><div style="font-size:clamp(2.4rem,4vw,3.2rem); font-weight:800; letter-spacing:-.03em; color:var(--uno-teal); line-height:1;">30</div><div style="margin-top:8px; font-size:.9375rem; font-weight:600; color:var(--text-muted);">Anni di storia</div></div>
+      <div><div style="font-size:clamp(2.4rem,4vw,3.2rem); font-weight:800; letter-spacing:-.03em; color:var(--uno-teal); line-height:1;">1500</div><div style="margin-top:8px; font-size:.9375rem; font-weight:600; color:var(--text-muted);">Laureati</div></div>
+      <div><div style="font-size:clamp(2.4rem,4vw,3.2rem); font-weight:800; letter-spacing:-.03em; color:var(--uno-teal); line-height:1;">5+1</div><div style="margin-top:8px; font-size:.9375rem; font-weight:600; color:var(--text-muted);">Percorsi formativi</div></div>
+      <div><div style="font-size:clamp(2.4rem,4vw,3.2rem); font-weight:800; letter-spacing:-.03em; color:var(--uno-teal); line-height:1;">350</div><div style="margin-top:8px; font-size:.9375rem; font-weight:600; color:var(--text-muted);">Iscritti</div></div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section id="corsi" style="max-width:1200px; margin:0 auto; padding:clamp(56px,8vw,104px) clamp(20px,4vw,48px);">
+    <span style="display:inline-block; font-size:.8125rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--uno-teal);">I corsi</span>
+    <h2 style="margin:12px 0 6px; font-size:clamp(2.1rem,4vw,3rem); font-weight:800; line-height:1.04; letter-spacing:-.02em; color:var(--text-strong);">Trova la tua <em style="font-style:italic; color:var(--uno-teal);">strada</em></h2>
+    <p style="margin:0 0 40px; font-size:1.15rem; color:var(--text-muted); max-width:56ch;">Sei corsi, sei possibilità di costruire il tuo futuro.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:24px;">
+      <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.CourseCard" course="dst" href="corso-dst/" hint-size="360px,300px"></x-import>
+      <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.CourseCard" course="etc" href="corso-etc/" hint-size="360px,300px"></x-import>
+      <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.CourseCard" course="bmea" href="corso-bmea/" hint-size="360px,300px"></x-import>
+      <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.CourseCard" course="ve" href="corso-ve/" hint-size="360px,300px"></x-import>
+      <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.CourseCard" course="ocf" href="corso-ocf/" hint-size="360px,300px"></x-import>
+      <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.CourseCard" course="nesiotika" href="corso-nesiotika/" hint-size="360px,300px"></x-import>
+    </div>
+  </section>
+
+  <!-- TERRITORIO -->
+  <section id="territorio" style="background:var(--uno-navy); color:#fff; position:relative; overflow:hidden;">
+    <div class="l-terr" style="position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:clamp(56px,8vw,104px) clamp(20px,4vw,48px); display:grid; grid-template-columns:1fr 1fr; gap:clamp(36px,5vw,72px); align-items:center;">
+      <div>
+        <span style="display:inline-block; font-size:.8125rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#7fd4c8;">Studiare a Oristano</span>
+        <h2 style="margin:14px 0 0; font-size:clamp(2rem,3.6vw,2.9rem); font-weight:800; line-height:1.06; letter-spacing:-.02em; color:#fff;">Una città <em style="font-style:italic; color:#7fd4c8;">a misura</em> di studente</h2>
+        <p style="margin:20px 0 0; font-size:1.15rem; line-height:1.65; color:rgba(255,255,255,.82); max-width:48ch;">Studiare a Oristano significa vivere in una città a misura di studente, dove tutto è a portata di mano. Meno tempo negli spostamenti, più tempo per studiare, confrontarti con gli altri e vivere davvero l'università.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:32px;">
+          <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="cream" size="lg" href="#corsi" hint-size="180px,56px">Scopri i corsi</x-import>
+        </div>
+      </div>
+      <div style="position:relative; aspect-ratio:5/4; border-radius:24px; overflow:hidden; box-shadow:var(--shadow-lg);">
+        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80" alt="Costa di Oristano" style="width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / OPEN DAY -->
+  <section id="openday" style="max-width:1200px; margin:0 auto; padding:clamp(56px,8vw,104px) clamp(20px,4vw,48px);">
+    <div style="position:relative; overflow:hidden; border-radius:24px; background:var(--uno-teal); color:#fff; padding:clamp(40px,6vw,80px);">
+      <div style="position:relative; z-index:1; max-width:640px;">
+        <span style="display:inline-block; font-size:.8125rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.85);">UNO Summer Day · 16 luglio 2026</span>
+        <h2 style="margin:14px 0 0; color:#fff; font-size:clamp(2rem,4vw,3rem); font-weight:800; letter-spacing:-.02em; line-height:1.05;">Vieni a conoscerci di <em style="font-style:italic; color:var(--uno-cream);">persona</em>!</h2>
+        <p style="margin:18px 0 32px; font-size:1.2rem; line-height:1.55; color:rgba(255,255,255,.92);">Visita la nostra sede, incontra i docenti, gli studenti e i laureati e scopri da vicino cosa significa studiare al Consorzio UNO.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px;">
+          <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="cream" size="lg" href="#" hint-size="280px,56px">Partecipa all'UNO Summer Day</x-import>
+          <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="secondary" size="lg" href="#corsi" hint-size="160px,56px">Scopri i corsi</x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--uno-navy); color:rgba(255,255,255,.72); position:relative; overflow:hidden;">
+    <div style="position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:clamp(44px,6vw,72px) clamp(20px,4vw,48px); display:flex; flex-wrap:wrap; gap:32px; align-items:center; justify-content:space-between;">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <img src="assets/logo/uno-logo-cream.svg" alt="UNO" style="height:32px; width:auto;">
+        <p style="margin:0; font-size:.9375rem; max-width:38ch; line-height:1.5;">Università a Oristano — Campagna Iscrizioni 2026/27. Piazza dell'Università, Oristano, Sardegna.</p>
+      </div>
+      <nav style="display:flex; gap:32px; font-size:.9375rem; font-weight:600; color:rgba(255,255,255,.86);">
+        <a href="#corsi" style="color:inherit;">Corsi</a>
+        <a href="#territorio" style="color:inherit;">La sede</a>
+        <a href="#openday" style="color:inherit;">Summer Day</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP CTA -->
+  <a href="https://wa.me/390000000000" target="_blank" rel="noopener" style="position:fixed; right:clamp(16px,3vw,32px); bottom:clamp(16px,3vw,32px); z-index:90; display:flex; align-items:center; gap:12px; padding:14px 22px 14px 18px; background:#25D366; color:#fff; border-radius:999px; box-shadow:0 12px 30px rgba(19,26,46,.28); font-weight:700; font-size:1rem; text-decoration:none;">
+    <svg width="26" height="26" viewBox="0 0 32 32" fill="currentColor" style="flex:none;"><path d="M16.003 3C9.373 3 3.997 8.375 3.997 15.004c0 2.117.553 4.184 1.605 6.008L4 29l8.184-1.564a12.02 12.02 0 0 0 3.819.622h.003C22.63 28.058 28 22.683 28 16.054 28 9.425 22.63 3.05 16.003 3zm0 2.2c5.414.043 9.795 4.457 9.795 9.854 0 5.427-4.417 9.844-9.845 9.844a9.83 9.83 0 0 1-3.44-.62l-.372-.14-4.855.928.94-4.73-.243-.386a9.79 9.79 0 0 1-1.54-5.27c0-5.428 4.417-9.845 9.845-9.845l.155.002zm-4.42 5.09c-.208 0-.545.078-.83.39-.286.312-1.09 1.066-1.09 2.6s1.116 3.015 1.272 3.223c.156.208 2.196 3.354 5.32 4.702.744.321 1.324.513 1.777.657.746.237 1.425.203 1.962.123.599-.089 1.843-.753 2.103-1.48.26-.728.26-1.352.182-1.482-.078-.13-.286-.208-.598-.364-.312-.156-1.844-.91-2.13-1.014-.286-.104-.494-.156-.702.157-.208.312-.806 1.013-.988 1.221-.182.208-.364.234-.676.078-.312-.156-1.317-.485-2.508-1.548-.927-.827-1.553-1.848-1.735-2.16-.182-.312-.019-.481.137-.637.14-.14.312-.364.468-.546.156-.182.208-.312.312-.52.104-.208.052-.39-.026-.546-.078-.156-.702-1.694-.962-2.318-.253-.609-.51-.526-.702-.536l-.598-.01z"/></svg>
+    Parla con noi
+  </a>
+</main>
+</x-dc>
 </body>
 </html>
