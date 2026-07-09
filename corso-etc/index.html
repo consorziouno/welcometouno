@@ -32,6 +32,8 @@
       --teal-100: rgba(234,160,0,.16);
     }
     main { --text-body: var(--uno-navy); --text-strong: var(--uno-navy); }
+
+    #iscrizione .uno-btn--block { white-space: normal; line-height: 1.35; text-align: center; padding-top: 12px; padding-bottom: 12px; }
   </style>
   <script>
     (function(){
@@ -124,10 +126,20 @@
             <div style="font-size:1.25rem; font-weight:800; color:var(--text-strong); letter-spacing:-.01em;">Anno accademico 2026 / 27</div>
             <p style="margin:0; color:var(--text-muted); font-size:.95rem; line-height:1.55;">Corso ad accesso libero: iscriviti al test di ingresso e preparati a iniziare il tuo percorso.</p>
             <div style="height:1px; background:var(--divider-cream); margin:2px 0;"></div>
-            <div style="display:flex; justify-content:space-between; font-size:.95rem;"><span style="color:var(--text-muted);">Sostenimento TOLC-SU</span><span style="font-weight:700; color:var(--text-strong);">entro il 30 settembre</span></div>
-            <div style="display:flex; justify-content:space-between; font-size:.95rem;"><span style="color:var(--text-muted);">Immatricolazioni</span><span style="font-weight:700; color:var(--text-strong);">9 luglio – 30 settembre 2026</span></div>
+            <div style="display:grid; gap:12px;">
+              <div>
+                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">Sostenimento TOLC-SU</div>
+                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">entro il 30 settembre</div>
+              </div>
+              <div>
+                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">Immatricolazioni</div>
+                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">9 luglio – 30 settembre 2026</div>
+              </div>
+            </div>
+            <div style="display:grid; gap:12px; width:100%;">
             <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="primary" block="{{ true }}" href="#" hint-size="100%,48px">Iscriviti al TOLC</x-import>
             <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="outline" block="{{ true }}" href="../#openday" hint-size="100%,48px">Partecipa all'UNO Summer Day</x-import>
+            </div>
           </div>
         </x-import>
       </aside>
