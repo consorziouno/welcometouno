@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+.thumbnail
+
+# Duplicati e archivi
+Welcome-to-UNO-Landing-clean/
+*.zip
+zi*
+zip*
+
+# Screenshot di sviluppo
+screenshots/

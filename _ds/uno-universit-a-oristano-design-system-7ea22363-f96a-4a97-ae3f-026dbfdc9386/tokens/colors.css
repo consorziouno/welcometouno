@@ -1,0 +1,97 @@
+/* ============================================================
+   UNO — Università a Oristano · Color tokens
+   ------------------------------------------------------------
+   Base palette comes straight from the brand manual:
+     · Sabbia / Cream  #F4EEE7  — the default page surface
+     · Verde / Teal    #287C71  — the primary brand accent
+     · Blu Notte/ Navy #131A2E  — primary dark / ink
+   Plus the six "colori dei corsi" — one categorical hue per
+   degree programme. They double as the semantic status scale.
+   ============================================================ */
+
+:root {
+  /* ---- Core brand ---- */
+  --uno-cream: #f4eee7;
+  --uno-teal:  #287c71;
+  --uno-navy:  #131a2e;
+  --uno-white: #ffffff;
+
+  /* ---- Cream / sand ramp (warm neutrals) ---- */
+  --cream-50:  #fbf8f4;
+  --cream-100: #f4eee7;  /* base */
+  --cream-200: #ece3d8;
+  --cream-300: #e0d4c4;
+  --cream-400: #cdbda7;
+
+  /* ---- Teal ramp ---- */
+  --teal-50:   #e7f0ee;
+  --teal-100:  #c7ddd8;
+  --teal-200:  #94c0b8;
+  --teal-500:  #287c71;  /* base */
+  --teal-600:  #21695f;  /* hover */
+  --teal-700:  #1a5249;  /* press */
+  --teal-800:  #133b35;
+
+  /* ---- Navy / ink ramp ---- */
+  --navy-900:  #0c1120;
+  --navy-800:  #131a2e;  /* base */
+  --navy-700:  #1e2740;
+  --navy-600:  #2b3654;
+  --navy-500:  #3c486a;
+  --navy-400:  #5b678c;
+
+  /* ---- Course palette (categorical / status) ---- */
+  --course-dst:       #db3418; /* Destinazioni — rosso */
+  --course-ve:        #890064; /* Viticoltura ed Enologia — magenta */
+  --course-etc:       #eaa000; /* Eventi & Turismo Culturale — arancio */
+  --course-ocf:       #86b500; /* Orticoltura e Florovivaismo — lime */
+  --course-bmea:      #23a1d4; /* Biotecnologie Marine — ciano */
+  --course-nesiotika: #1561af; /* Nesiotika · archeologia — blu */
+
+  /* generic accent aliases (same six hues) */
+  --accent-red:     #db3418;
+  --accent-magenta: #890064;
+  --accent-orange:  #eaa000;
+  --accent-lime:    #86b500;
+  --accent-cyan:    #23a1d4;
+  --accent-blue:    #1561af;
+
+  /* ---- Semantic surfaces ---- */
+  --surface-page:    var(--cream-100); /* default warm page background */
+  --surface-card:    var(--uno-white); /* cards sit on cream */
+  --surface-raised:  var(--uno-white);
+  --surface-sunken:  var(--cream-200);
+  --surface-inverse: var(--uno-navy);  /* dark sections */
+  --surface-brand:   var(--uno-teal);  /* teal feature sections */
+
+  /* ---- Semantic text ---- */
+  --text-strong:        var(--uno-navy);  /* headings / ink */
+  --text-body:          #232b40;          /* body copy */
+  --text-muted:         #5c6473;          /* secondary copy */
+  --text-subtle:        #8a8f9c;          /* captions, meta */
+  --text-on-dark:       var(--cream-100);
+  --text-on-dark-muted: #aab0bd;
+  --text-on-brand:      var(--uno-white);
+  --text-link:          var(--uno-teal);
+  --text-link-hover:    var(--teal-700);
+
+  /* ---- Borders & dividers ---- */
+  --border-subtle:  rgba(19, 26, 46, 0.10);
+  --border-default: rgba(19, 26, 46, 0.16);
+  --border-strong:  rgba(19, 26, 46, 0.32);
+  --border-on-dark: rgba(244, 238, 231, 0.18);
+  --divider-cream:  #e3d8c9;
+
+  /* ---- Status (mapped to the course palette) ---- */
+  --status-success:    #4f9b1e; /* deeper lime for legibility */
+  --status-success-bg: #eaf4dd;
+  --status-warning:    #c98700; /* deeper amber */
+  --status-warning-bg: #fbeecb;
+  --status-danger:     #db3418;
+  --status-danger-bg:  #fbe1da;
+  --status-info:       #1772b8;
+  --status-info-bg:    #ddeefa;
+
+  /* ---- Focus ---- */
+  --focus-ring: rgba(40, 124, 113, 0.45);
+}

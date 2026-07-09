@@ -1,0 +1,57 @@
+/* ============================================================
+   UNO — Università a Oristano · Typography tokens
+   ------------------------------------------------------------
+   One family does all the work: Montserrat (variable).
+   · Headings  → ExtraBold / Bold, tight tracking
+   · Accent    → the emphasised word inside a heading is set in
+                 Bold ITALIC + teal (the brand's signature move)
+   · Eyebrow   → "occhiello": uppercase, wide tracking, teal
+   · Body      → Regular / Medium
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-sans: "Montserrat", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-display: "Montserrat", "Helvetica Neue", Arial, system-ui, sans-serif;
+  /* The UNO wordmark itself is an SVG (assets/logo/), a custom serif. */
+
+  /* ---- Weights ---- */
+  --fw-light:     300; /* @kind font */
+  --fw-regular:   400; /* @kind font */
+  --fw-medium:    500; /* @kind font */
+  --fw-semibold:  600; /* @kind font */
+  --fw-bold:      700; /* @kind font */
+  --fw-extrabold: 800; /* @kind font */
+  --fw-black:     900; /* @kind font */
+
+  /* ---- Type scale (rem @ 16px root) ---- */
+  --text-xs:   0.75rem;   /* 12 */
+  --text-sm:   0.8125rem; /* 13 */
+  --text-base: 0.9375rem; /* 15 */
+  --text-md:   1rem;      /* 16 */
+  --text-lg:   1.25rem;   /* 20 */
+  --text-xl:   1.625rem;  /* 26 */
+  --text-2xl:  2.125rem;  /* 34 */
+  --text-3xl:  2.75rem;   /* 44 */
+  --text-4xl:  3.75rem;   /* 60 */
+  --text-5xl:  5rem;      /* 80 — hero */
+
+  /* ---- Line height ---- */
+  --leading-none:    1;     /* @kind font */
+  --leading-tight:   1.06;  /* @kind font */ /* display */
+  --leading-snug:    1.18;  /* @kind font */ /* headings */
+  --leading-normal:  1.5;   /* @kind font */ /* body */
+  --leading-relaxed: 1.65;  /* @kind font */
+
+  /* ---- Letter spacing ---- */
+  --tracking-tighter: -0.03em; /* @kind font */ /* big display */
+  --tracking-tight:   -0.015em;/* @kind font */ /* headings */
+  --tracking-normal:  0;       /* @kind font */
+  --tracking-wide:    0.06em;  /* @kind font */
+  --tracking-wider:   0.14em;  /* @kind font */ /* eyebrow / uppercase labels */
+
+  /* ---- Composite role tokens ---- */
+  --eyebrow-size:     var(--text-sm);
+  --eyebrow-weight:   var(--fw-bold);
+  --eyebrow-tracking: var(--tracking-wider);
+}

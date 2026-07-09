@@ -1,0 +1,22 @@
+/* ============================================================
+   UNO — Università a Oristano · Webfonts
+   Montserrat (variable). The brand sans for all UI & headings.
+   The "UNO" wordmark is a custom serif and lives only as an SVG
+   logo asset (assets/logo/) — it is not a text font.
+   ============================================================ */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/tokens/base.css">
+  <link rel="stylesheet" href="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/styles.css">
+  <script src="_ds/uno-universit-a-oristano-design-system-7ea22363-f96a-4a97-ae3f-026dbfdc9386/_ds_bundle.js"></script>
+  <style>
+    @media (max-width: 900px) {
+      .c-body { grid-template-columns: 1fr !important; }
+      .c-facts { grid-template-columns: 1fr 1fr !important; }
+      .c-hero__inner { grid-template-columns: 1fr !important; }
+      .c-nav__links { display:none !important; }
+      .c-feature { grid-template-columns: 1fr !important; }
+    }
+    /* Re-theme the accent to the Nesiotika course blue across the whole page */
+    main {
+      --uno-teal: #1561af;
+      --teal-600: #124e8c;
+      --teal-700: #0e3d6e;
+      --teal-50: rgba(21,97,175,.08);
+      --teal-100: rgba(21,97,175,.16);
+    }
+    main { --text-body: var(--uno-navy); --text-strong: var(--uno-navy); }
+  </style>
+  <script>
+    (function(){
+      function onScroll(){
+        var h=document.getElementById('site-header'), l=document.getElementById('site-logo');
+        if(!h||!l) return;
+        var s=window.scrollY>24;
+        h.firstElementChild.style.paddingTop=s?'8px':'14px';
+        h.firstElementChild.style.paddingBottom=s?'8px':'14px';
+        l.style.height=s?'73px':'81px';
+      }
+      window.addEventListener('scroll',onScroll,{passive:true});
+      onScroll();
+    })();
+  </script>
+</helmet>
+
+<main style="font-family: var(--font-sans); color: var(--text-body); background: var(--surface-page);">
+
+  <!-- HEADER -->
+  <header id="site-header" style="position:sticky; top:0; z-index:50; background:var(--uno-navy); border-bottom:1px solid var(--border-on-dark); transition:padding .25s var(--ease-standard,ease);">
+    <div style="max-width:1200px; margin:0 auto; padding:14px clamp(20px,4vw,48px); display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="UNO Landing.dc.html" style="display:flex; align-items:center;"><img id="site-logo" src="assets/logo/welcome-uno-white-green.svg" alt="Welcome to UNO — Università a Oristano" style="height:81px; width:auto; display:block; transition:height .25s var(--ease-standard,ease);"></a>
+      <nav class="c-nav__links" style="display:flex; align-items:center; gap:32px; font-size:.9375rem; font-weight:600; color:rgba(255,255,255,.86);">
+        <a href="UNO Landing.dc.html#corsi" style="color:inherit;">Corsi</a>
+        <a href="UNO Landing.dc.html#territorio" style="color:inherit;">La sede</a>
+        <a href="UNO Landing.dc.html#openday" style="color:inherit;">Summer Day</a>
+      </nav>
+      <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="primary" size="md" href="#iscrizione" hint-size="180px,44px">Iscriviti al corso</x-import>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="position:relative; overflow:hidden; background:var(--course-nesiotika);">
+    <div style="position:absolute; inset:0; background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1900&q=80'); background-size:cover; background-position:center;"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(100deg, rgba(21,97,175,.94) 0%, rgba(21,97,175,.78) 42%, rgba(14,61,110,.42) 100%);"></div>
+    <div class="c-hero__inner" style="position:relative; z-index:1; max-width:1120px; margin:0 auto; padding:clamp(48px,7vw,96px) clamp(20px,4vw,48px); display:grid; grid-template-columns:auto 1fr; gap:32px; align-items:center;">
+      <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.CourseIcon" course="nesiotika" size="120" hint-size="120px,120px"></x-import>
+      <div>
+        <a href="UNO Landing.dc.html#corsi" style="display:inline-block; font-size:.875rem; color:rgba(255,255,255,.9); font-weight:600; margin-bottom:14px;">← Tutti i corsi</a>
+        <div style="font-size:.8125rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.85);">Scuola di specializzazione · NESIOTIKA</div>
+        <h1 style="margin:12px 0 0; font-size:clamp(2.2rem,5vw,3.8rem); font-weight:800; line-height:1.03; letter-spacing:-.025em; color:#fff; max-width:22ch; text-wrap:balance;">Scuola di Specializzazione in Beni Archeologici</h1>
+        <p style="margin:16px 0 0; color:rgba(255,255,255,.92); font-weight:500; font-size:1.15rem;">Dipartimento di Storia, Scienze dell'Uomo e della Formazione – Università degli Studi di Sassari<br>Sede di Oristano</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTS -->
+  <section style="max-width:1120px; margin:0 auto; padding:clamp(28px,4vw,44px) clamp(20px,4vw,48px) 0;">
+    <div class="c-facts" style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+      <div style="background:var(--surface-card); border:1px solid var(--border-subtle); border-radius:12px; padding:20px;"><div style="font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-subtle);">Sede</div><div style="font-size:1.35rem; font-weight:800; color:var(--course-nesiotika); margin-top:6px;">Oristano</div></div>
+      <div style="background:var(--surface-card); border:1px solid var(--border-subtle); border-radius:12px; padding:20px;"><div style="font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-subtle);">Accesso</div><div style="font-size:1.35rem; font-weight:800; color:var(--course-nesiotika); margin-top:6px;">Numero programmato</div></div>
+      <div style="background:var(--surface-card); border:1px solid var(--border-subtle); border-radius:12px; padding:20px;"><div style="font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-subtle);">Durata</div><div style="font-size:1.35rem; font-weight:800; color:var(--course-nesiotika); margin-top:6px;">2 anni</div></div>
+      <div style="background:var(--surface-card); border:1px solid var(--border-subtle); border-radius:12px; padding:20px;"><div style="font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-subtle);">Classe di laurea</div><div style="font-size:1.35rem; font-weight:800; color:var(--course-nesiotika); margin-top:6px;">Specializzazione</div></div>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <section style="max-width:1120px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(20px,4vw,48px);">
+    <div class="c-body" style="display:grid; grid-template-columns:1.6fr 1fr; gap:clamp(32px,4vw,64px); align-items:start;">
+      <div>
+        <span style="display:inline-block; font-size:.8125rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--course-nesiotika);">Il corso</span>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.4rem); margin:10px 0 16px; color:var(--text-strong); letter-spacing:-.02em; line-height:1.1;">Leggere il passato per <em style="font-style:italic; color:var(--course-nesiotika);">comprendere il presente</em></h2>
+        <p style="line-height:1.75; margin:0 0 16px; font-size:1.15rem; color:var(--text-body);">Un percorso di alta formazione rivolto a laureati magistrali che intendono acquisire competenze specialistiche nella ricerca, tutela e valorizzazione del patrimonio archeologico. La scuola integra attività sul campo, ricerca scientifica e confronto con professionisti del settore, preparando figure altamente qualificate.</p>
+
+        <h3 style="font-size:1.35rem; margin:40px 0 16px; color:var(--text-strong);">Ambiti di specializzazione</h3>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div style="background:var(--course-nesiotika); border-radius:999px; padding:16px 18px; font-weight:600; color:#fff; display:flex; align-items:center; justify-content:center; text-align:center;">Ricerca e metodologia archeologica</div>
+          <div style="background:var(--course-nesiotika); border-radius:999px; padding:16px 18px; font-weight:600; color:#fff; display:flex; align-items:center; justify-content:center; text-align:center;">Tutela e valorizzazione del patrimonio culturale</div>
+          <div style="background:var(--course-nesiotika); border-radius:999px; padding:16px 18px; font-weight:600; color:#fff; display:flex; align-items:center; justify-content:center; text-align:center;">Gestione e conservazione dei beni archeologici</div>
+          <div style="background:var(--course-nesiotika); border-radius:999px; padding:16px 18px; font-weight:600; color:#fff; display:flex; align-items:center; justify-content:center; text-align:center;">Tecnologie e strumenti per l'archeologia</div>
+        </div>
+
+        <h3 style="font-size:1.35rem; margin:40px 0 16px; color:var(--text-strong);">Sbocchi professionali</h3>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:14px;">
+          <li style="display:flex; gap:14px; align-items:center; line-height:1.4; font-size:1.075rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--course-nesiotika)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg> Operare nelle Soprintendenze e nel Ministero della Cultura</li>
+          <li style="display:flex; gap:14px; align-items:center; line-height:1.4; font-size:1.075rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--course-nesiotika)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;" aria-hidden="true"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></svg> Lavorare in musei, parchi e aree archeologiche</li>
+          <li style="display:flex; gap:14px; align-items:center; line-height:1.4; font-size:1.075rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--course-nesiotika)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;" aria-hidden="true"><path d="M2 22v-5l5-5 5 5-5 5z"/><path d="M9.5 14.5 16 8"/><path d="m17 2 5 5-.5.5a3.53 3.53 0 0 1-5 0s0 0 0 0a3.53 3.53 0 0 1 0-5L17 2"/></svg> Collaborare con università, enti di ricerca e missioni archeologiche</li>
+          <li style="display:flex; gap:14px; align-items:center; line-height:1.4; font-size:1.075rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--course-nesiotika)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Svolgere attività di libera professione e consulenza archeologica</li>
+        </ul>
+
+        <h3 style="font-size:1.35rem; margin:40px 0 16px; color:var(--text-strong);">Domande frequenti</h3>
+        <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Accordion" default-open="{{ faqOpen }}" items="{{ faq }}" hint-size="100%,240px"></x-import>
+      </div>
+
+      <aside id="iscrizione" style="position:sticky; top:96px;">
+        <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Card" variant="elevated" padding="lg" hint-size="100%,300px">
+          <div style="display:grid; gap:16px;">
+            <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Badge" variant="solid" hint-size="140px,26px">Iscrizioni aperte</x-import>
+            <div style="font-size:1.25rem; font-weight:800; color:var(--text-strong); letter-spacing:-.01em;">Anno accademico 2026 / 27</div>
+            <p style="margin:0; color:var(--text-muted); font-size:.95rem; line-height:1.55;">Corso ad accesso programmato: iscriviti al concorso di ammissione.</p>
+            <div style="height:1px; background:var(--divider-cream); margin:2px 0;"></div>
+            <div style="display:flex; justify-content:space-between; font-size:.95rem;"><span style="color:var(--text-muted);">Prove</span><span style="font-weight:700; color:var(--text-strong);">da definire</span></div>
+            <div style="display:flex; justify-content:space-between; font-size:.95rem;"><span style="color:var(--text-muted);">Immatricolazioni</span><span style="font-weight:700; color:var(--text-strong);">disponibili a breve</span></div>
+            <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="primary" block="{{ true }}" href="#" hint-size="100%,48px">Iscriviti al concorso di ammissione</x-import>
+            <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="outline" block="{{ true }}" href="UNO Landing.dc.html#openday" hint-size="100%,48px">Partecipa all'UNO Summer Day</x-import>
+          </div>
+        </x-import>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FEATURE BAND -->
+  <section style="position:relative; overflow:hidden; background:var(--uno-navy); color:#fff;">
+    <div class="c-feature" style="display:grid; grid-template-columns:1fr 1fr; align-items:stretch;">
+      <div style="min-height:340px; background-image:url('https://images.unsplash.com/photo-1541417904950-b855846fe1ab?w=1200&q=80'); background-size:cover; background-position:center;"></div>
+      <div style="position:relative; overflow:hidden; padding:clamp(40px,6vw,80px) clamp(24px,4vw,64px); display:flex; flex-direction:column; justify-content:center;">
+        <div style="position:relative; z-index:1;">
+          <span style="display:inline-block; font-size:.8125rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#8fbdea;">Tharros e i nuraghi</span>
+          <h2 style="margin:14px 0 0; font-size:clamp(1.8rem,3vw,2.5rem); font-weight:800; line-height:1.08; letter-spacing:-.02em; color:#fff;">Il passato <em style="font-style:italic; color:#8fbdea;">sotto i piedi</em></h2>
+          <p style="margin:18px 0 0; font-size:1.1rem; line-height:1.65; color:rgba(255,255,255,.82); max-width:44ch;">Campagne di scavo, laboratori di restauro e progetti di valorizzazione tra i siti archeologici del Sinis e i nuraghi della Sardegna centro-occidentale, fin dal primo anno.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--uno-navy); color:rgba(255,255,255,.72); position:relative; overflow:hidden; border-top:1px solid var(--border-on-dark);">
+    <div style="position:relative; z-index:1; max-width:1120px; margin:0 auto; padding:clamp(44px,6vw,72px) clamp(20px,4vw,48px); display:flex; flex-wrap:wrap; gap:32px; align-items:center; justify-content:space-between;">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <img src="assets/logo/uno-logo-cream.svg" alt="UNO" style="height:32px; width:auto;">
+        <p style="margin:0; font-size:.9375rem; max-width:38ch; line-height:1.5;">Università a Oristano — Campagna Iscrizioni 2026/27. Piazza dell'Università, Oristano, Sardegna.</p>
+      </div>
+      <nav style="display:flex; gap:32px; font-size:.9375rem; font-weight:600; color:rgba(255,255,255,.86);">
+        <a href="UNO Landing.dc.html#corsi" style="color:inherit;">Corsi</a>
+        <a href="UNO Landing.dc.html#territorio" style="color:inherit;">La sede</a>
+        <a href="UNO Landing.dc.html#openday" style="color:inherit;">Summer Day</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP CTA -->
+  <a href="https://wa.me/390000000000" target="_blank" rel="noopener" style="position:fixed; right:clamp(16px,3vw,32px); bottom:clamp(16px,3vw,32px); z-index:90; display:flex; align-items:center; gap:12px; padding:14px 22px 14px 18px; background:#25D366; color:#fff; border-radius:999px; box-shadow:0 12px 30px rgba(19,26,46,.28); font-weight:700; font-size:1rem; text-decoration:none;">
+    <svg width="26" height="26" viewBox="0 0 32 32" fill="currentColor" style="flex:none;"><path d="M16.003 3C9.373 3 3.997 8.375 3.997 15.004c0 2.117.553 4.184 1.605 6.008L4 29l8.184-1.564a12.02 12.02 0 0 0 3.819.622h.003C22.63 28.058 28 22.683 28 16.054 28 9.425 22.63 3.05 16.003 3zm0 2.2c5.414.043 9.795 4.457 9.795 9.854 0 5.427-4.417 9.844-9.845 9.844a9.83 9.83 0 0 1-3.44-.62l-.372-.14-4.855.928.94-4.73-.243-.386a9.79 9.79 0 0 1-1.54-5.27c0-5.428 4.417-9.845 9.845-9.845l.155.002zm-4.42 5.09c-.208 0-.545.078-.83.39-.286.312-1.09 1.066-1.09 2.6s1.116 3.015 1.272 3.223c.156.208 2.196 3.354 5.32 4.702.744.321 1.324.513 1.777.657.746.237 1.425.203 1.962.123.599-.089 1.843-.753 2.103-1.48.26-.728.26-1.352.182-1.482-.078-.13-.286-.208-.598-.364-.312-.156-1.844-.91-2.13-1.014-.286-.104-.494-.156-.702.157-.208.312-.806 1.013-.988 1.221-.182.208-.364.234-.676.078-.312-.156-1.317-.485-2.508-1.548-.927-.827-1.553-1.848-1.735-2.16-.182-.312-.019-.481.137-.637.14-.14.312-.364.468-.546.156-.182.208-.312.312-.52.104-.208.052-.39-.026-.546-.078-.156-.702-1.694-.962-2.318-.253-.609-.51-.526-.702-.536l-.598-.01z"/></svg>
+    Parla con noi
+  </a>
+</main>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      faqOpen: [0],
+      faq: [
+        { q: "Quando aprono le iscrizioni?", a: "Le date di apertura e chiusura delle iscrizioni saranno comunicate a breve. La Scuola è rivolta a laureate e laureati magistrali in possesso dei requisiti di accesso previsti dal bando." },
+        { q: "Dove si svolgono le attività didattiche?", a: "Le attività si svolgono presso la sede di Oristano e comprendono lezioni, seminari, laboratori, attività sul campo e cantieri di scavo, offrendo una formazione specialistica che integra ricerca ed esperienza pratica." },
+        { q: "Sono previste attività pratiche?", a: "Sì. La Scuola affianca alla formazione teorica attività sul campo, laboratori, cantieri di scavo e altre esperienze applicative, permettendo di acquisire competenze specialistiche direttamente in contesti operativi." },
+        { q: "Chi può accedere alla Scuola?", a: "L'accesso è riservato a laureate e laureati magistrali in possesso dei requisiti previsti per l'ammissione alla Scuola di Specializzazione in Beni Archeologici, secondo quanto stabilito dal bando di ammissione." },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>
