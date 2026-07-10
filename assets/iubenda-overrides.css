@@ -1,0 +1,5 @@
+/* Forza il banner cookie Iubenda in basso */
+#iubenda-cs-banner.iubenda-cs-default-floating {
+  top: auto !important;
+  bottom: 0 !important;
+}
