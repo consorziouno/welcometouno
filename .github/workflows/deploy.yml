@@ -1,0 +1,26 @@
+name: Deploy via FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: Upload Files
+    runs-on: ubuntu-latest
+    
+    steps:
+      
+      - name: Checkout del codice
+        uses: actions/checkout@v4
+
+      
+      - name: Caricamento tramite FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ./public_html/
+          exclude: .git*, .github*, .gitignore, deploy.yml, README.md, node_modules*, .env, .DS_Store, .vscode*, .editorconfig, .gitattributes, .htaccess, package.json, package-lock.json
