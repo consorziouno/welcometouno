@@ -11,11 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      
       - name: Checkout del codice
         uses: actions/checkout@v4
 
-      
       - name: Caricamento tramite FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -23,4 +21,17 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ./public_html/
-          exclude: .git*, .github*, .gitignore, deploy.yml, README.md, node_modules*, .env, .DS_Store, .vscode*, .editorconfig, .gitattributes, .htaccess, package.json, package-lock.json
+          # La barra verticale '|' permette la scrittura su più righe
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github*
+            **/.github*/**
+            **/node_modules/**
+            **/.env
+            **/.DS_Store
+            **/.vscode*
+            **/.editorconfig
+            README.md
+            package.json
+            package-lock.json
