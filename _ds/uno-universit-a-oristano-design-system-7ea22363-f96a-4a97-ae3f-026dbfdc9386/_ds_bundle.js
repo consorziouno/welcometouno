@@ -218,7 +218,7 @@ const COURSES = {
     "token": "--course-ve",
     "classe": "L-26",
     "ente": "Dipartimento di Agraria",
-    "viewBox": "0 0 179 150",
+    "viewBox": "1125.0 526.0 203.0 203.0",
     "paths": "<path d=\"M1173.09,554.59h137.95c.94,0,1.7.76,1.7,1.7v141.33c0,.94-.76,1.7-1.7,1.7h-141.33c-.94,0-1.7-.76-1.7-1.7v-137.95c0-2.8,2.27-5.08,5.08-5.08\" style=\"fill:#890064; stroke:#fff; stroke-miterlimit:10; stroke-width:7.5px;\"></path><path d=\"M1227.93,685.61l-17.2-42.54h11.3l12.09,31.66,12.34-31.66h10.88l-17.44,42.54h-11.97Z\" style=\"fill:#fff;\"></path><path d=\"M1260.44,685.61v-42.54h33.55v9.05h-23.09v7.66h15.25v8.75h-15.25v8.02h23.34v9.05h-33.79Z\" style=\"fill:#fff;\"></path><path d=\"M1168.95,630.06l26.73-46.29c.48-.84-.12-1.89-1.09-1.89h-53.45c-.97,0-1.57,1.05-1.09,1.89l26.73,46.29c.48.84,1.7.84,2.18,0Z\" style=\"fill:#890064; stroke:#fff; stroke-miterlimit:10; stroke-width:7.5px;\"></path>"
   },
   ocf: {
