@@ -141,20 +141,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div style="display:grid; gap:16px;">
             <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Badge" variant="solid" hint-size="140px,26px">Iscrizioni aperte</x-import>
             <div style="font-size:1.25rem; font-weight:800; color:var(--text-strong); letter-spacing:-.01em;">Anno Accademico 2026/2027</div>
-            <p style="margin:0; color:var(--text-muted); font-size:.95rem; line-height:1.55;">Corso ad accesso libero: iscriviti al test di ingresso e preparati a iniziare il tuo percorso.</p>
+            <p style="margin:0; color:var(--text-muted); font-size:.95rem; line-height:1.55;">Per iscriverti al corso:</p>
             <div style="height:1px; background:var(--divider-cream); margin:2px 0;"></div>
             <div style="display:grid; gap:12px;">
               <div>
-                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">Sostenimento TOLC-SU</div>
-                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">entro il 30 settembre</div>
+                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">Immatricolazione su UNICA (ESSE3)</div>
+                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">9 luglio – 30 settembre 2026</div>
               </div>
               <div>
-                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">Immatricolazioni</div>
-                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">9 luglio – 30 settembre 2026</div>
+                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">TOLC-SU (obbligatorio)</div>
+                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">entro il 30 settembre 2026</div>
               </div>
             </div>
             <div style="display:grid; gap:12px; width:100%;">
-            <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="primary" block="{{ true }}" href="https://testcisia.it/calendario.php?tolc=umanistica" target="_blank" rel="noopener" hint-size="100%,48px">Iscriviti al TOLC</x-import>
+            <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="primary" block="{{ true }}" href="https://unica.esse3.cineca.it/Home.do" target="_blank" rel="noopener" hint-size="100%,48px">Iscriviti su UNICA</x-import>
+            <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="outline" block="{{ true }}" href="https://testcisia.it/calendario.php?tolc=umanistica" target="_blank" rel="noopener" hint-size="100%,48px">Iscriviti al TOLC-SU</x-import>
             </div>
           </div>
         </x-import>
@@ -206,6 +207,7 @@ class Component extends DCLogic {
       faqOpen: [0],
       faq: [
         { q: "Quando posso iscrivermi?", a: "Le immatricolazioni aprono il 9 luglio e si chiudono il 30 settembre 2026. Il corso è ad accesso libero: per immatricolarti dovrai sostenere il TOLC-SU, il test d'ingresso composto da 50 quesiti di comprensione del testo e conoscenza della lingua italiana, conoscenze e competenze acquisite negli studi e ragionamento logico, ai quali si aggiungono 30 quesiti di inglese." },
+        { q: "Come funziona l'iscrizione?", a: "L'iscrizione prevede due passaggi: 1) Presentare la domanda di immatricolazione sul portale ESSE3 di UNICA entro il 30 settembre 2026. 2) Sostenere il TOLC-SU, il test di valutazione della preparazione iniziale, entro il 30 settembre 2026. Il TOLC-SU non è una prova selettiva: serve a verificare la preparazione iniziale e, se necessario, ad assegnare eventuali Obblighi Formativi Aggiuntivi (OFA)." },
         { q: "Dove si svolgono le lezioni?", a: "Le lezioni si svolgono presso il Consorzio UNO, Chiostro del Carmine, via Carmine – 09170 Oristano OR. Il percorso formativo alterna attività in aula, laboratori, esercitazioni, project work e tirocini, offrendo un'esperienza di apprendimento concreta e multidisciplinare." },
         { q: "È previsto un tirocinio?", a: "Sì. Il tirocinio curriculare obbligatorio ti permetterà di collaborare con enti e organizzazioni del settore turistico e culturale, partecipando alla progettazione, organizzazione e promozione di eventi e iniziative culturali." },
         { q: "Cosa serve per accedere?", a: "Il diploma di scuola secondaria superiore e il superamento del test di ammissione. Creatività, capacità organizzativa e interesse per gli eventi, la cultura e il turismo rappresentano un ottimo punto di partenza per affrontare il percorso universitario." },

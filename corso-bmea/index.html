@@ -120,7 +120,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3 style="font-size:1.35rem; margin:40px 0 16px; color:var(--text-strong);">Cosa studierai</h3>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
           <div style="background:var(--course-bmea); border-radius:999px; padding:16px 18px; font-weight:600; color:#fff; display:flex; align-items:center; justify-content:center; text-align:center;">Biotecnologie applicate agli ecosistemi acquatici</div>
-          <div style="background:var(--course-bmea); border-radius:999px; padding:16px 18px; font-weight:600; color:#fff; display:flex; align-items:center; justify-content:center; text-align:center;">Operare nelle imprese della blue economy e dell'acquacoltura</div>
+          <div style="background:var(--course-bmea); border-radius:999px; padding:16px 18px; font-weight:600; color:#fff; display:flex; align-items:center; justify-content:center; text-align:center;">Blue economy e acquacoltura sostenibile</div>
           <div style="background:var(--course-bmea); border-radius:999px; padding:16px 18px; font-weight:600; color:#fff; display:flex; align-items:center; justify-content:center; text-align:center;">Tecniche di laboratorio e analisi biologiche</div>
           <div style="background:var(--course-bmea); border-radius:999px; padding:16px 18px; font-weight:600; color:#fff; display:flex; align-items:center; justify-content:center; text-align:center;">Tutela, monitoraggio e restauro degli ecosistemi</div>
         </div>
@@ -142,20 +142,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div style="display:grid; gap:16px;">
             <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Badge" variant="solid" hint-size="140px,26px">Iscrizioni aperte</x-import>
             <div style="font-size:1.25rem; font-weight:800; color:var(--text-strong); letter-spacing:-.01em;">Anno Accademico 2026/2027</div>
-            <p style="margin:0; color:var(--text-muted); font-size:.95rem; line-height:1.55;">Corso ad accesso libero: iscriviti al test di ingresso e preparati a iniziare il tuo percorso.</p>
+            <p style="margin:0; color:var(--text-muted); font-size:.95rem; line-height:1.55;">Per iscriverti al corso:</p>
             <div style="height:1px; background:var(--divider-cream); margin:2px 0;"></div>
             <div style="display:grid; gap:12px;">
               <div>
-                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">Sostenimento TOLC-B</div>
-                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">entro il 30 settembre</div>
+                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">Immatricolazione su UNICA (ESSE3)</div>
+                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">9 luglio – 30 settembre 2026</div>
               </div>
               <div>
-                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">Immatricolazioni</div>
-                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">9 luglio – 30 settembre 2026</div>
+                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">TOLC-B (obbligatorio)</div>
+                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">entro il 30 settembre 2026</div>
               </div>
             </div>
             <div style="display:grid; gap:12px; width:100%;">
-            <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="primary" block="{{ true }}" href="https://testcisia.it/calendario.php?tolc=biologia" target="_blank" rel="noopener" hint-size="100%,48px">Iscriviti al TOLC</x-import>
+            <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="primary" block="{{ true }}" href="https://unica.esse3.cineca.it/Home.do" target="_blank" rel="noopener" hint-size="100%,48px">Iscriviti su UNICA</x-import>
+            <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="outline" block="{{ true }}" href="https://testcisia.it/calendario.php?tolc=biologia" target="_blank" rel="noopener" hint-size="100%,48px">Iscriviti al TOLC-B</x-import>
             </div>
           </div>
         </x-import>
@@ -206,6 +207,7 @@ class Component extends DCLogic {
       faqOpen: [0],
       faq: [
         { q: "Quando posso iscrivermi?", a: "Le immatricolazioni aprono il 9 luglio e si chiudono il 30 settembre 2026. Il corso è ad accesso libero: per immatricolarti dovrai sostenere il TOLC-B, il test d'ingresso composto da 50 quesiti di matematica, biologia, chimica e fisica, ai quali si aggiungono 30 quesiti di inglese." },
+        { q: "Come funziona l'iscrizione?", a: "L'iscrizione prevede due passaggi: 1) Presentare la domanda di immatricolazione sul portale ESSE3 di UNICA entro il 30 settembre 2026. 2) Sostenere il TOLC-B, il test di valutazione della preparazione iniziale, entro il 30 settembre 2026. Il TOLC-B non è una prova selettiva: serve a verificare la preparazione iniziale e, se necessario, ad assegnare eventuali Obblighi Formativi Aggiuntivi (OFA)." },
         { q: "Dove si svolgono le lezioni?", a: "Le lezioni si svolgono presso il Consorzio UNO, Chiostro del Carmine, via Carmine – 09170 Oristano OR. Il percorso formativo alterna attività in aula, laboratori, esercitazioni pratiche e tirocini, offrendo un'esperienza di apprendimento concreta e multidisciplinare." },
         { q: "È previsto un tirocinio?", a: "Sì. Il corso prevede un tirocinio curriculare da svolgere presso laboratori, enti di ricerca, aziende ed enti partner, per mettere in pratica le competenze acquisite durante il percorso di studi e confrontarsi con il mondo del lavoro." },
         { q: "Cosa serve per accedere?", a: "Il diploma di scuola secondaria superiore e il superamento del test di ingresso. Sono utili buone basi di biologia, chimica e matematica." },

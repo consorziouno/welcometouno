@@ -141,20 +141,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div style="display:grid; gap:16px;">
             <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Badge" variant="solid" hint-size="140px,26px">Iscrizioni aperte</x-import>
             <div style="font-size:1.25rem; font-weight:800; color:var(--text-strong); letter-spacing:-.01em;">Anno Accademico 2026/2027</div>
-            <p style="margin:0; color:var(--text-muted); font-size:.95rem; line-height:1.55;">Corso ad accesso programmato: iscriviti al test di selezione e preparati a iniziare il tuo percorso.</p>
+            <p style="margin:0; color:var(--text-muted); font-size:.95rem; line-height:1.55;">Corso ad accesso programmato (40 posti).<br>Per partecipare alla selezione:</p>
             <div style="height:1px; background:var(--divider-cream); margin:2px 0;"></div>
             <div style="display:grid; gap:12px;">
               <div>
-                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">Sostenimento TOLC-AV</div>
-                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">entro il 16 settembre 2026</div>
+                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">Domanda di ammissione su Self Studenti UNISS</div>
+                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">26 giugno – 16 settembre 2026</div>
               </div>
               <div>
-                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">Immatricolazioni</div>
-                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">26 giugno – 16 settembre 2026</div>
+                <div style="color:var(--text-muted); font-size:.875rem; line-height:1.4;">TOLC-AV (obbligatorio)</div>
+                <div style="font-weight:700; color:var(--text-strong); font-size:.95rem; margin-top:4px; line-height:1.4;">entro il 16 settembre 2026</div>
               </div>
             </div>
             <div style="display:grid; gap:12px; width:100%;">
-            <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="primary" block="{{ true }}" href="https://testcisia.it/calendario.php?tolc=agraria" target="_blank" rel="noopener" hint-size="100%,48px">Iscriviti al TOLC</x-import>
+            <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="primary" block="{{ true }}" href="https://uniss.esse3.cineca.it/Home.do" target="_blank" rel="noopener" hint-size="100%,48px">Iscriviti al concorso di ammissione</x-import>
+            <x-import component-from-global-scope="UNOUniversitAOristanoDesignSystem_7ea223.Button" variant="outline" block="{{ true }}" href="https://testcisia.it/calendario.php?tolc=agraria" target="_blank" rel="noopener" hint-size="100%,48px">Iscriviti al TOLC-AV</x-import>
             </div>
           </div>
         </x-import>
@@ -206,6 +207,7 @@ class Component extends DCLogic {
       faqOpen: [0],
       faq: [
         { q: "Quando posso iscrivermi?", a: "Le immatricolazioni aprono il 26 giugno e si chiudono il 16 settembre 2026. Il corso è a numero programmato con 40 posti disponibili. L'ammissione avviene sulla base del punteggio ottenuto al TOLC-AV, composto da 50 quesiti di biologia, chimica, fisica, matematica, logica e comprensione verbale, oltre a 30 quesiti di inglese." },
+        { q: "Come funziona l'iscrizione?", a: "L'iscrizione prevede tre passaggi: 1) Presentare la domanda di ammissione sul portale Self Studenti UNISS entro il 16 settembre 2026. 2) Sostenere il TOLC-AV entro il 16 settembre 2026. 3) Immatricolarsi, se risulti utilmente collocato nella graduatoria di ammissione, dal 26 settembre entro il 9 ottobre." },
         { q: "Dove si svolgono le lezioni?", a: "Le lezioni si svolgono presso il Consorzio UNO, Chiostro del Carmine, via Carmine – 09170 Oristano OR. Il percorso formativo alterna attività in aula, laboratori, esercitazioni pratiche, attività sul campo e Tirocinio Pratico Valutativo, offrendo un'esperienza di apprendimento concreta e fortemente professionalizzante." },
         { q: "È previsto un tirocinio?", a: "Sì. Il corso prevede un Tirocinio Pratico Valutativo (TPV) di 1.250 ore presso aziende, enti, laboratori, studi professionali e organizzazioni del settore, per acquisire esperienza diretta e sviluppare competenze tecnico-professionali immediatamente spendibili nel mondo del lavoro." },
         { q: "Cosa serve per accedere?", a: "Per iscriverti è necessario aver conseguito il diploma di scuola secondaria di secondo grado e sostenere il TOLC-AV. Interesse per l'agricoltura, l'innovazione e la sostenibilità rappresentano un ottimo punto di partenza per affrontare il percorso universitario." },
